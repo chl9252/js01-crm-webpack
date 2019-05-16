@@ -1,7 +1,18 @@
+import $ from 'jquery'
+import popper from 'popper.js'
+import bootstrap from 'bootstrap'
+import './css/main.css'
+
+import './edit.js'
+import './hints.js'
+import './new.js'
+import './request.js'
+console.log('main.js')
+
  const trElementTemplate = `
 <tr class="bid-row">
 	<td scope="row">
-		<a href="view-and-edit.html?id=%ID%">Заявка №%ID%</a>
+		<a href="edit.html?id=%ID%">Заявка №%ID%</a>
 	</td>
 	<td>%CLIENT_NAME%</td>
 	<td>

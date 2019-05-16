@@ -1,1 +1,10 @@
-console.log("Hello World!")
+import $ from 'jquery'
+import popper from 'popper.js'
+import bootstrap from 'bootstrap'
+import './css/main.css'
+
+import './edit.js'
+import './hints.js'
+import './main.js'
+import './new.js'
+import './request.js'

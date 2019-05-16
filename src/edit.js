@@ -1,3 +1,9 @@
+/**import $ from 'jquery'
+import popper from 'popper.js'
+import bootstrap from 'bootstrap'
+import './css/main.css'
+import './request'*/
+console.log('edit.js')
 
 const trElementTemplate = `
 	<div class="row mb-3">
@@ -141,7 +147,7 @@ dbRequest.getOrderById(address, data => {
 			dbRequest.editOrderById(address, editOrder, data => {
 
 		//			console.log(data)
-			location.replace('index.html')
+			location.replace('main.html')
 				})
 
 		})
@@ -151,7 +157,7 @@ dbRequest.getOrderById(address, data => {
 			dbRequest.deleteOrderById(address, () => {
 
 		//			console.log(data)
-			location.replace('index.html')
+			location.replace('main.html')
 				})
 		})
 }

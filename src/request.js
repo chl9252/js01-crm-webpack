@@ -1,4 +1,5 @@
-;(function () {
+console.log('request.js')
+
 	const url = 'http://89.108.64.67:3000'
 	const key = '?key=adjf989f89981045789sdf'
 	const address = '/orders'
@@ -66,7 +67,7 @@
 	}
 
 	window.dbRequest = dbRequest
-})()
+
 
 // Получить все заказы
 // GET /orders

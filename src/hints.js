@@ -1,4 +1,10 @@
- 
+/**import $ from 'jquery'
+import popper from 'popper.js'
+import bootstrap from 'bootstrap'
+import './css/main.css'
+import './request'*/
+console.log('hints.js') 
+
 main()
 
 function main () {
@@ -6,7 +12,7 @@ function main () {
 		reinit.addEventListener('click', function(event) {
 			event.stopPropagation()
 			dbRequest.reinit(() => {
-			location.replace('index.html')
+			location.replace('main.html')
 			})
 		})
 

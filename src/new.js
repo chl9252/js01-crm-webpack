@@ -1,4 +1,9 @@
- 
+/**import $ from 'jquery'
+import popper from 'popper.js'
+import bootstrap from 'bootstrap'
+import './css/main.css'
+import './request'*/
+console.log('new.js')
 main()
 
 function main () {
@@ -27,7 +32,7 @@ function main () {
 	// console.log(newOrder)
 
 		dbRequest.createOrder(newOrder, () => {
-			location.replace('index.html')
+			location.replace('main.html')
 		})
 
 	})
