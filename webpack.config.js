@@ -13,8 +13,8 @@ module.exports = {
 
 		filename: '[name].js',
 
-//		path: path.join(__dirname, '/dist'),
-path: path.join(__dirname, '/'),
+		path: path.join(__dirname, '/dist'),
+// path: path.join(__dirname, '/'),
 
 		publicPath: '/dist'
 
