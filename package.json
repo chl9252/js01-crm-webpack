@@ -2,7 +2,7 @@
   "name": "js01-crm-webpack",
   "version": "1.0.0",
   "description": "crm-webpack",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
@@ -30,14 +30,13 @@
     "babel-preset-env": "^1.7.0",
     "css-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.31.0",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0"

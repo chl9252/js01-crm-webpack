@@ -1,8 +1,9 @@
-/**import $ from 'jquery'
-import popper from 'popper.js'
-import bootstrap from 'bootstrap'
-import './css/main.css'
-import './request'*/
+import dbRequest from './request'
+
+const varLocat = window.location.toString()
+if(varLocat.indexOf("edit.html")) {
+
+
 console.log('edit.js')
 
 const trElementTemplate = `
@@ -83,14 +84,14 @@ function main () {
 	urlget = urlget.slice(urlget2)
 
 // console.log(urlget)
-	const address = `/order/${urlget}`
+	const address = `/order/${urlget}/`
 
 	let dataSave
 	
 dbRequest.getOrderById(address, data => {
 
 		const rootDir = document.getElementById('listViewer')
-	 // console.log(data)
+	  console.log(data)
 		dataSave = data
 		item = data
 
@@ -118,8 +119,11 @@ dbRequest.getOrderById(address, data => {
 		})
 		const buttons = document.querySelectorAll('button')
 	//	console.log(buttons)
+	if(buttons[0]) {
 		buttons[0].addEventListener('click', function(event) {
 			event.stopPropagation()
+	
+	
 	//		console.log(dataSave)
 			const input = document.forms.firstForm.elements
 	//		console.log(input)
@@ -142,7 +146,7 @@ dbRequest.getOrderById(address, data => {
 
 		//	console.log(editOrder)
 
-			const address = `/order/${urlget}`
+			const address = `/order/${urlget}/`
 		//	console.log(address)
 			dbRequest.editOrderById(address, editOrder, data => {
 
@@ -151,6 +155,7 @@ dbRequest.getOrderById(address, data => {
 				})
 
 		})
+		
 
 		buttons[1].addEventListener('click', function(event) {
 			event.stopPropagation()
@@ -160,6 +165,8 @@ dbRequest.getOrderById(address, data => {
 			location.replace('main.html')
 				})
 		})
+	}
+}
 }
 
 // Получить все заказы

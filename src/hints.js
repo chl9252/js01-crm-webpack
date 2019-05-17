@@ -1,23 +1,26 @@
-/**import $ from 'jquery'
-import popper from 'popper.js'
-import bootstrap from 'bootstrap'
-import './css/main.css'
-import './request'*/
+import dbRequest from './request'
+
+const varLocat = window.location.toString()
+if(varLocat.indexOf("/hints.html")) {
+
+console.log(varLocat)
 console.log('hints.js') 
 
 main()
-
-function main () {
+}
+ function main () {
 	const reinit = document.getElementById("reinit-btn")
+	if(reinit) {
 		reinit.addEventListener('click', function(event) {
 			event.stopPropagation()
 			dbRequest.reinit(() => {
 			location.replace('main.html')
 			})
 		})
-
+	}
 
 }
+
 
 // Получить все заказы
 // GET /orders

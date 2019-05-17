@@ -1,13 +1,12 @@
-import $ from 'jquery'
-import popper from 'popper.js'
-import bootstrap from 'bootstrap'
-import './css/main.css'
 
-import './edit.js'
-import './hints.js'
-import './new.js'
-import './request.js'
+import dbRequest from './request.js'
 console.log('main.js')
+
+const varLocat = window.location.toString()
+
+if(varLocat.indexOf("main.html")) {
+	console.log('rrrrrrrrrr')
+}
 
  const trElementTemplate = `
 <tr class="bid-row">
@@ -33,7 +32,7 @@ function main () {
 
   	dbRequest.getList(data => {
 		const rootDir = document.getElementById('listViewer')
-
+console.log(data)
 		getListOrders(data)
 	   const input = document.forms.filterForm.elements
 	 

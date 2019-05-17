@@ -1,8 +1,9 @@
-/**import $ from 'jquery'
-import popper from 'popper.js'
-import bootstrap from 'bootstrap'
-import './css/main.css'
-import './request'*/
+import dbRequest from './request'
+
+const varLocat = window.location.toString()
+if(varLocat.indexOf("new.html")) {
+
+
 console.log('new.js')
 main()
 
@@ -10,7 +11,9 @@ function main () {
 //	const url = 'http://89.108.64.67:3000'
 //	const key = '?key=adjf989f89981045789sdf'
 
-	document.querySelector('button').addEventListener('click', function(event) {
+	const buttonNew = document.querySelector('button')
+	if(buttonNew) {
+		buttonNew.addEventListener('click', function(event) {
 		event.stopPropagation()
 		const input = document.forms.firstForm.elements
  //console.log(input)
@@ -36,6 +39,8 @@ function main () {
 		})
 
 	})
+	}
+}
 
 
 }

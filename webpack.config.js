@@ -5,20 +5,24 @@ module.exports = {
 	context: path.resolve(__dirname, 'src'),
 	entry: {
 
-		app: './main.js'
+		app: './index.js'
+/**		main: './main.js',
+		edit: './edit.js',
+		hints: './hints.js',
+		new: './new.js'*/
 
 	},
 
-	output: {
+/**	output: {
 
 		filename: '[name].js',
 
 		path: path.join(__dirname, '/dist'),
-// path: path.join(__dirname, '/'),
+
 
 		publicPath: '/dist'
 
-	},
+	},*/
 	devtool: "source-map",
 	module: {
 	  	rules: [{
@@ -28,7 +32,7 @@ module.exports = {
 	        	loader: 'babel-loader',
 	        	options: {
 	         	   presets: ['@babel/preset-env']
-	        	}
+	         	   	     	}
 	        }
 	    },
 		{
